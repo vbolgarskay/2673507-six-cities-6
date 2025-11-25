@@ -15,7 +15,6 @@ type AppProps = {
 
 function App({ reviews }: AppProps): JSX.Element {
   const offers = useSelector((state: RootState) => state.offers);
-  const isAuthorized = false;
 
   return (
     <Routes>
@@ -24,7 +23,7 @@ function App({ reviews }: AppProps): JSX.Element {
       <Route
         path="/favorites"
         element={
-          <PrivateRoute isAuthorized={isAuthorized}>
+          <PrivateRoute>
             <FavoritesPage
               offers={offers.filter((offer) => offer.isFavorite)}
             />
