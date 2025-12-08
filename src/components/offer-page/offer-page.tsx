@@ -134,9 +134,7 @@ function OfferPage(): JSX.Element | null {
               </div>
               <div className="offer__rating rating">
                 <div className="offer__stars rating__stars">
-                  <span
-                    style={{ width: `${(offer.rating / 5) * 100}%` }}
-                  ></span>
+                  <span style={{ width: `${(offer.rating / 5) * 100}%` }} />
                   <span className="visually-hidden">Rating</span>
                 </div>
                 <span className="offer__rating-value rating__value">
